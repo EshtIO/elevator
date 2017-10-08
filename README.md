@@ -17,13 +17,13 @@ From the command line:
 * (Not recommended)`./gradlew run -Dexec.args="${args}"` where args delimeter - space
 
 ### Usage application options (args):
-  *  -d, --door - Time between opening and closing doors (ms)<br>
+  *  `-d`, `--door` - Time between opening and closing doors (ms)<br>
       Default: 1000<br>
-  *  -f, --floors - Floors count (>=5 && <= 20)<br>
+  *  `-f`, `--floors` - Floors count ( >= 5 & <= 20 )<br>
       Default: 20<br>
-  *  -h, --height - Floor height (m)<br>
+  *  `-h`, `--height` - Floor height (m)<br>
       Default: 2.8<br>
-  *  -s, --speed - Lift speed (m/s)<br>
+  *  `-s`, `--speed` - Lift speed (m/s)<br>
       Default: 2.0<br>
 
 ### Supported elevator console commands after run application:
