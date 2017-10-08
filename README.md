@@ -35,3 +35,10 @@ From the command line:
   Description: Continue program
 * Command: `q`, `quit`, `exit`, `close`<br>
   Description: Exiting the application
+
+#### Runtime console command examples:
+* `i 8` - press button 8 inside elevator
+* `o 5` - press button outside elevator on 5 floor
+* `c` - continue
+* `q` - quit
+  
