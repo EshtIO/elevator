@@ -1,5 +1,5 @@
 # Elevator simulator
-Configurable console elevator simulator
+Configurable console elevator simulator<br>
 
 ## Build the project
 From the command line:
@@ -10,8 +10,7 @@ Gradle build tool will create "build" directory with build files
 ## Run the project
 
 From the command line:
-* (Recommended) Execute build project<br>
-    unarchive {root}/build/distributions/elevator-{version}.zip<br>
+* (Recommended) Execute build project and unarchive {root}/build/distributions/elevator-{version}.zip<br>
     Run script with args:  
     * `{unarchived}/bin/elevator.sh {args}` (for Unix)
     * `{unarchived}/bin/elevator.bat {args}` (for Windows)<br>
@@ -30,7 +29,7 @@ From the command line:
 ### Supported elevator console commands after run application:
 * Command: `i {floor}`, `inside {floor}`<br>
   Description: Button press with floor inside elevator
-* Command: `outside {floor}`, `o {floor}`<br>
+* Command: `o {floor}`, `outside {floor}`<br>
   Description: Elevator call from floor
 * Command: `n`, `next`, `c`, `continue`<br>
   Description: Continue program
