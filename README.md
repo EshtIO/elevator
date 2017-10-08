@@ -3,7 +3,8 @@ Configurable console elevator simulator<br>
 
 ## Build the project
 From the command line:
-* `./gradlew build`
+* `./gradlew build` (for Unix)
+* `gradlew.bat build` (for Windows)
 
 Gradle build tool will create "build" directory with build files
 
