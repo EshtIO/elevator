@@ -33,5 +33,5 @@ From the command line:
   Description: Elevator call from floor
 * Command: `n`, `next`, `c`, `continue`<br>
   Description: Continue program
-* Command: `q`, `quit`, `exit`, `close`
+* Command: `q`, `quit`, `exit`, `close`<br>
   Description: Exiting the application
