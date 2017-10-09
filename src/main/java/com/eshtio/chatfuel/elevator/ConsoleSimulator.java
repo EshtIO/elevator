@@ -32,7 +32,7 @@ public class ConsoleSimulator {
     }
 
     /**
-     * Execute console command and send it to controller
+     * Redirect console command to elevator controller
      *
      * @param command console command
      */

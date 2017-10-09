@@ -19,8 +19,7 @@ public class ElevatorController {
     private final ElevatorCommandRepository repository;
     /** Command priority executor */
     private final ElevatorCommandExecutor executor;
-
-    /** Максимальное количество этажей 5 - 20 */
+    /** Max floor count */
     private final int maxFloor;
 
     public ElevatorController(Elevator elevator,
