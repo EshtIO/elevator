@@ -1,8 +1,5 @@
 package com.eshtio.chatfuel.elevator.console;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -13,8 +10,6 @@ import java.util.stream.Collectors;
  * Elevator simulator command reader from console, need close after using
  */
 public class ConsoleCommandReader implements AutoCloseable {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(ConsoleCommandReader.class);
 
     /**
      * Buffered reader
@@ -33,30 +28,30 @@ public class ConsoleCommandReader implements AutoCloseable {
      */
     public ConsoleCommand readCommand() throws IOException {
         while (true) {
-            LOGGER.info("Write your command...");
+            System.out.println("Write your command...");
             String line = reader.readLine();
             if (line == null) {
                 return null;
             }
             String[] args = line.split(" ");
             if (args.length < 1 || args.length > 2) {
-                LOGGER.error("Illegal args length");
-                LOGGER.debug(getApiInfo());
+                System.err.println("Illegal args length");
+                System.out.println(getApiInfo());
                 continue;
             }
             try {
                 ConsoleCommandType type = ConsoleCommandType.byKey(args[0]);
                 if (type.hasFloorNumber() && args.length < 2) {
-                    LOGGER.error("Illegal args length");
-                    LOGGER.debug(getApiInfo());
+                    System.err.println("Illegal args length");
+                    System.out.println(getApiInfo());
                     continue;
                 }
                 return type.hasFloorNumber() ?
                         new ConsoleCommand(type, Integer.parseInt(args[1])) :
                         new ConsoleCommand(type);
             } catch (Exception ex) {
-                LOGGER.error("Parse console command error", ex);
-                LOGGER.debug(getApiInfo());
+                System.err.println("Parse console command error " + ex.getMessage());
+                System.out.println(getApiInfo());
             }
         }
     }
