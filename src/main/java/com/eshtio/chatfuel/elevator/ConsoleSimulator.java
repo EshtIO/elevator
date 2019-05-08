@@ -94,7 +94,6 @@ public class ConsoleSimulator {
                     .addObject(config)
                     .build()
                     .parse(args);
-
         } catch (ParameterException ex) {
             LOGGER.error("Parse parameters error: {}", ex.getMessage());
             ex.getJCommander().usage();

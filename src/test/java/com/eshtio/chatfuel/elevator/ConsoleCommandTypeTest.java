@@ -12,11 +12,15 @@ import java.util.stream.Collectors;
 public class ConsoleCommandTypeTest {
 
     @Test
-    public void enumsHasUniqueKeys() throws Exception {
+    public void enumsHasUniqueKeys() {
         List<String> allKeys = Arrays.stream(ConsoleCommandType.values())
                 .flatMap(command -> command.getKeys().stream())
                 .collect(Collectors.toList());
-        Assert.assertTrue("All enum keys must be unique",
-                allKeys.size() == new HashSet<>(allKeys).size());
+        Assert.assertEquals(
+                "All enum keys must be unique",
+                allKeys.size(),
+                new HashSet<>(allKeys).size()
+        );
     }
+
 }

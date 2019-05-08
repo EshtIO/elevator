@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class ElevatorCommandRepositoryTest {
 
     @Test
-    public void remove() throws Exception {
+    public void remove() {
         ElevatorCommandRepository repository = new ElevatorCommandRepository();
         assertFalse(repository.hasCommands());
         assertFalse(repository.remove(1));
@@ -45,7 +45,7 @@ public class ElevatorCommandRepositoryTest {
     }
 
     @Test
-    public void testInternalCommands() throws Exception {
+    public void testInternalCommands() {
         ElevatorCommandRepository repository = new ElevatorCommandRepository();
         // Add three commands
         repository.addInternal(3);
@@ -77,7 +77,7 @@ public class ElevatorCommandRepositoryTest {
     }
 
     @Test
-    public void testExternalCommands() throws Exception {
+    public void testExternalCommands() {
         ElevatorCommandRepository repository = new ElevatorCommandRepository();
         // Add three commands
         repository.addExternal(3);
