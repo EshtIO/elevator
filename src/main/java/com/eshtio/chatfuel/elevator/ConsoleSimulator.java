@@ -85,7 +85,7 @@ public class ConsoleSimulator {
         return new ConsoleSimulator(controller);
     }
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         // Parse config
         ElevatorSimulatorConfig config = new ElevatorSimulatorConfig();
         LOGGER.info("Welcome to elevator simulator");
